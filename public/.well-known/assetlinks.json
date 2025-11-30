@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.vercel.daily_expense_app_nine.twa",
+        "sha256_cert_fingerprints": ["06:13:22:FD:E4:65:BF:27:38:7F:41:F1:E3:F9:FE:9C:50:87:FF:8D:39:AA:8D:C8:87:DD:9C:77:9C:37:F7:8B"]
+      }
+    }]
