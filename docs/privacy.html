@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Política de Privacidad — Daily Expense Tracker</title>
+  <meta name="description" content="Política de privacidad de Daily Expense Tracker. Información sobre datos y almacenamiento." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--text:#e6eef8;--muted:#9aa7bf;--accent:#3b82f6;}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#071026 0%, #0b1220 100%);color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    .wrap{max-width:900px;margin:40px auto;padding:28px;background:rgba(255,255,255,0.02);border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    h1{margin:0 0 6px;font-size:28px;color:#ffffff}
+    p{color:var(--muted);line-height:1.6}
+    h2{color:var(--text);margin-top:18px}
+    .note{background:rgba(59,130,246,0.06);padding:10px;border-radius:8px;border:1px solid rgba(59,130,246,0.08);color:#dbeafe}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    a{color:var(--accent);text-decoration:none}
+    pre{white-space:pre-wrap;color:var(--muted);font-size:13px;background:rgba(255,255,255,0.01);padding:10px;border-radius:6px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <h1>Política de Privacidad</h1>
+    <p><strong>Daily Expense Tracker</strong> (la “App”) no recopila, procesa ni transmite datos personales a servidores externos cuando se utiliza en su modo estándar. Toda la información que el usuario introduce (gastos, categorías, fechas, notas) se almacena únicamente en el dispositivo del usuario mediante almacenamiento local (localStorage / IndexedDB) y no se comparte con terceros por defecto.</p>
+
+    <h2>¿Qué datos recoge la App?</h2>
+    <p>La App almacena localmente los registros de gastos y la configuración del usuario (idioma, moneda, preferencias). Estos datos se guardan en el dispositivo y no se envían a ningún servidor ni servicio externo a menos que el usuario lo decida explícitamente.</p>
+
+    <h2>¿Se usan servicios de terceros?</h2>
+    <p>La versión pública actual no utiliza servicios externos para almacenar datos. En futuras versiones la App podrá integrar opcionalmente servicios en la nube (por ejemplo, copias de seguridad) o proveedores de anuncios (AdMob). En esos casos, se informará claramente antes de activar la función y se solicitará el consentimiento del usuario cuando corresponda.</p>
+
+    <div class="note">
+      <strong>Importante:</strong> Si activas funciones que utilicen la red (por ejemplo, exportación en línea o sincronización), es posible que parte de la información se transfiera a servidores de terceros. En ese supuesto, se informará y se ofrecerá la opción de desactivar la función.
+    </div>
+
+    <h2>Publicidad</h2>
+    <p>La App puede mostrar anuncios (AdMob u otro proveedor) para la monetización. Los proveedores de anuncios pueden recopilar datos anónimos y generar identificadores publicitarios para personalizar anuncios. Consulte la política específica del proveedor de anuncios si le interesa más información.</p>
+
+    <h2>Política de seguridad</h2>
+    <p>Tus datos permanecen en tu dispositivo. No realizamos procesos automatizados que utilicen tus datos fuera del propio dispositivo. Recomendamos usar bloqueo del dispositivo y copias de seguridad locales si necesitas preservar la información.</p>
+
+    <h2>Contacto</h2>
+    <p>Si tienes preguntas acerca de esta política, o deseas solicitar la eliminación de información, escribe a: <a href="mailto:tu-email@tudominio.com">tu-email@tudominio.com</a></p>
+
+    <footer>
+      <p>Versión de la política: 1.0 — Fecha: <!--DATE--> </p>
+      <p>Daily Expense Tracker — App desarrollada por Neonova 80.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Inserta la fecha de hoy en el footer
+    (function(){
+      var el = document.querySelector('footer p');
+      if(el){
+        var d = new Date();
+        var y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,'0'), day = String(d.getDate()).padStart(2,'0');
+        el.innerHTML = 'Versión de la política: 1.0 — Fecha: ' + day + '/' + m + '/' + y;
+      }
+    })();
+  </script>
+</body>
+</html>
